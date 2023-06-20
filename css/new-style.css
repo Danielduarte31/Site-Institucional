@@ -1,0 +1,456 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+         :root {
+            --azul-escuro: #061f34;
+            --dourado: #daa520;
+            --branco: #fafafa;
+            --cinza-claro: #ECECEC;
+            --cinza-escur0: #565656;
+            --preto: #111111
+        }
+        
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: sans-serif
+        }
+        /* Formatação do HEADER */
+        
+        header {
+            width: 100%;
+            height: 100px;
+            /*centralizar elementos no header*/
+            background-color: var(--azul-escuro);
+            display: flex;
+            justify-content: center;
+        }
+        
+        header nav {
+            width: 960px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        header nav .logo {
+            width: 200px;
+        }
+        
+        header nav .logo img {
+            height: 100%;
+        }
+        
+        .img-resp {
+            width: 100%;
+        }
+        
+        header nav ul {
+            display: flex;
+            gap: 20px;
+        }
+        
+        header nav ul li {
+            font-family: sans-serif;
+            list-style-type: none;
+        }
+        
+        header nav ul li a:link,
+        header nav ul li a:visited {
+            color: #fafafa;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.5s;
+        }
+        
+        header nav ul li a:hover {
+            color: var(--dourado);
+            text-shadow: 0px 0px 3px rgba(255, 255, 255, 0.5);
+            transition: 0.5s;
+        }
+        
+        header nav ul li a:active {}
+        /* Formatação do MAIN */
+        
+        main {
+            width: 960px;
+        }
+        
+        .banner {
+            width: 100%;
+        }
+        
+        .banner img {
+            width: 100%;
+            margin-top: 10px;
+            border-radius: 20px;
+        }
+        /* DIV CONTENT */
+        
+        .content {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .content a:link,
+        .content a:visited {
+            text-decoration: none;
+            color: black;
+        }
+        /* .content a:hover {
+    color: goldenrod;
+} */
+        
+        .content .card:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            color: #1c4e8d;
+            transition: 1s;
+            filter: grayscale(100%);
+        }
+        
+        .content .card {
+            width: 306px;
+            background-color: #ececec;
+            border: 1px solid #ffff;
+            border-radius: 10px;
+            margin: 20px 0;
+            padding: 7px 10px;
+            color: rgb(0, 0, 0);
+            box-shadow: 0px 0px 5px;
+            box-sizing: 0px 0px 10px rgba(0, 0, 0.75);
+            transition: 0.5s;
+        }
+        
+        .content .card h3 {
+            text-align: center;
+            margin: 10px;
+        }
+        
+        .content .card img {
+            width: 100%;
+            transition: 0.5s;
+        }
+        
+        .content .card:hover img {
+            filter: grayscale(0%);
+            transition: 0.5s;
+        }
+        /* DIV TOP-GENERAL - DEVE CONTER AS MESMAS CONFIGURAÇÕES DO BANNER*/
+        
+        .top-general {
+            width: 100%;
+        }
+        
+        .top-general h1 {
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .top-general>div {
+            width: 100%;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .imagem {
+            width: 470px;
+            border-radius: 10px;
+        }
+        
+        .top-general p {
+            width: 470px;
+            font-size: 20px;
+            font-weight: normal;
+        }
+        
+        .top-general div form {}
+        
+        .top-general div ul {}
+        
+        .top-general div ul li {}
+        /* DIV CONTENT-GENERAL */
+        
+        .content-general {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .content-general a:link,
+        .content-general a:visited {
+            width: 225px;
+            line-height: 225px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--branco);
+            text-transform: uppercase;
+            font-size: 20px;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .content-general .card a:hover {}
+        
+        .content-general .card {
+            width: 225px;
+            height: 225px;
+            background-image: url(../assets/prod-racks.webp);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: 0.75s;
+        }
+        
+        .content-general .card:nth-child(1) {
+            background-image: url(../assets/prod-racks.webp);
+        }
+        
+        .content-general .card:nth-child(2) {
+            background-image: url(../assets/prod-servers.webp);
+        }
+        
+        .content-general .card:nth-child(3) {
+            background-image: url(../assets/prod-switches.webp);
+        }
+        
+        .content-general .card:nth-child(4) {
+            background-image: url(../assets/prod-workstations.webp);
+        }
+        
+        .content-general .card h3 {
+            transition: 0.75s;
+        }
+        
+        .content-general .card h3:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: 0.75s;
+        }
+        /* serviços-general */
+        
+        .serviços-general {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .serviços-general a:link,
+        .serviços-general a:visited {
+            width: 225px;
+            line-height: 225px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--branco);
+            text-transform: uppercase;
+            font-size: 20px;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .serviços-general .card-serv {
+            width: 225px;
+            height: 225px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: 0.75s;
+        }
+        
+        .serviços-general .card-serv:nth-child(1) {
+            background-image: url(../assets/serv-support.webp);
+        }
+        
+        .serviços-general .card-serv:nth-child(2) {
+            background-image: url(../assets/serv-manutencao.webp);
+        }
+        
+        .serviços-general .card-serv:nth-child(3) {
+            background-image: url(../assets/serv-gerenciamento.webp);
+        }
+        
+        .serviços-general .card-serv:nth-child(4) {
+            background-image: url(../assets/serv-monitoramento.webp);
+        }
+        
+        .serviços-general .card-serv h3 {
+            transition: 0.75s;
+        }
+        
+        .serviços-general .card-serv h3:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: 0.75s;
+        }
+        
+        .serviços-general .card-serv img {}
+        /* DIV CONTENT-MAP */
+        
+        .content-map {}
+        /* Formatação sobre nos */
+        
+        .sobre-general {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        .sobre-general a:link,
+        .sobre-general a:visited {
+            width: 225px;
+            line-height: 225px;
+            text-align: center;
+            text-decoration: none;
+            color: var(--branco);
+            text-transform: uppercase;
+            font-size: 20px;
+            text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        .sobre-general .card a:hover {}
+        
+        .sobre-general .card {
+            width: 225px;
+            height: 225px;
+            background-image: url(../assets/prod-racks.webp);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: 0.75s;
+        }
+        
+        .sobre-general .card:nth-child(1) {
+            background-image: url(../assets/serv-support.webp);
+        }
+        
+        .sobre-general .card:nth-child(2) {
+            background-image: url(../assets/serv-manutencao.webp);
+        }
+        
+        .sobre-general .card:nth-child(3) {
+            background-image: url(../assets/serv-gerenciamento.webp);
+        }
+        
+        .sobre-general .card:nth-child(4) {
+            background-image: url(../assets/serv-monitoramento.webp);
+        }
+        
+        .sobre-general .card h3 {
+            transition: 0.75s;
+        }
+        
+        .sobre-general .card h3:hover {
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: 0.75s;
+        }
+        /* Formatação racks */
+        
+        .detalhes {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .detalhes img,
+        .detalhes ul {
+            width: 225px;
+            border-radius: 10px;
+        }
+        
+        .detalhes p {
+            width: 470px;
+        }
+        
+        .detalhes ul {
+            border: 1px solid var(--azul-escuro);
+            padding: 20px;
+            background-color: var(--cinza-claro);
+            border-radius: 10px;
+        }
+        
+        .detalhes ul li {
+            list-style-type: none;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .galeria {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 20px;
+        }
+        
+        .galeria img {
+            width: 225px;
+            border-radius: 10px;
+        }
+        
+        .galeria img:hover {
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+            cursor: pointer;
+        }
+        /* Fomatação do FOOTER */
+        
+        footer {
+            width: 100%;
+            height: 240px;
+            background-color: var(--azul-escuro);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        footer div {
+            width: 960px;
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        
+        footer div ul {
+            width: 225px;
+            text-align: center;
+        }
+        
+        footer div ul li {
+            list-style-type: none;
+            line-height: 30px;
+        }
+        
+        footer div ul li a:link,
+        footer div ul li a:visited {
+            color: #fafafa;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+            transition: 0.5s;
+        }
+        
+        footer div ul li a:hover {
+            color: #daa520;
+            transition: 0.5s;
+        }
+        
+        footer p {
+            color: #fafafa;
+            font-size: 14px;
+        }
+        
+        .white {}
+        
+        .gray-one {}
